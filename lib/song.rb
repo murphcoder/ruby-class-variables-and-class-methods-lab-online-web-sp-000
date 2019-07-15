@@ -10,7 +10,7 @@ class Song
   end
   
   def self.genres
-    @@genres.collect {|genre| 
+    @@genres.uniq
   
   attr_accessor :name, :artist, :genre
   
