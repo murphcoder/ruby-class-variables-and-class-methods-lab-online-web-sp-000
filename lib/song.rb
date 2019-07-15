@@ -15,7 +15,7 @@ class Song
     
     if @@artists.none? {|entry| entry == artist}
       @@artists << artist
-    end
+  
     
     if @@genres.none? {|entry| entry == genre}
       @@genres << genre
