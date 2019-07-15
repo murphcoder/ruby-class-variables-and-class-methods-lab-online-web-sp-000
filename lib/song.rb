@@ -9,7 +9,8 @@ class Song
     @@count
   end
   
-  def self.
+  def self.genres
+    @@genres.collect {|genre| 
   
   attr_accessor :name, :artist, :genre
   
