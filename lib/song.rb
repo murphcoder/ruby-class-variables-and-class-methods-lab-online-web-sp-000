@@ -15,11 +15,9 @@ class Song
     
     if @@artists.none? {|entry| entry == artist}
       @@artists << artist
-  
     
     if @@genres.none? {|entry| entry == genre}
       @@genres << genre
-    end
     
     if @@genre_count[genre] = nil
       @@genre_count[genre] = 1
