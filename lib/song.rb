@@ -23,7 +23,7 @@ class Song
     check(@@genres,genre)
     
     if @@genre_count[genre] = nil
-      @@genre_count[:genre] =+
+      @@genre_count[genre] =+
     
   end
   
