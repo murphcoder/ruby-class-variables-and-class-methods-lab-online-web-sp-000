@@ -4,6 +4,7 @@ class Song
   @@genres = []
   @@artists = []
   @@genre_count = {}
+  @@artist_count = {}
   
   def self.count
     @@count
@@ -15,6 +16,16 @@ class Song
   
   def self.artists
     @@artists.uniq
+  end
+  
+  def self.genre_count
+    @@genres.each do |genre|
+      if @@genre_count[genre] = nil
+        @@genre_count[genre] = 1
+      else
+        @@genre_count[genre] += 1
+      end
+    end
   end
   
   attr_accessor :name, :artist, :genre
