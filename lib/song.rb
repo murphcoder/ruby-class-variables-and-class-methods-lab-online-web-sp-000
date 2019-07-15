@@ -11,6 +11,22 @@ class Song
     @artist = artist
     @genre = genre
     @@count =+
+    def check(class_var,local_var)
+      if class_var.none? {|entry| entry == local_var}
+        class_var << local_var
+      end
+    end
+    check(@@artists,artist)
+    check(@@genres,genre)
     
+  end
+  
+  def artists
+    @@artists
+  end
+  
+  def genres
+    @@genres
+  end
     
 end
