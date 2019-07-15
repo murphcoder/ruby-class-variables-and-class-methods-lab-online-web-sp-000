@@ -3,6 +3,7 @@ class Song
   @@count = 0
   @@genres = []
   @@artists = []
+  @@genre_count = {}
   
   attr_accessor :song, :artist, :genre
   
@@ -11,21 +12,20 @@ class Song
     @artist = artist
     @genre = genre
     @@count =+
-    @@genre_count = {}
     
-    def check(class_var,local_var)
-      if class_var.none? {|entry| entry == local_var}
-        class_var << local_var
-      end
+    if @@artists.none? {|entry| entry == artist}
+      @@artists << artist
     end
     
-    check(@@artists,artist)
-    check(@@genres,genre)
+    if @@genres.none? {|entry| entry == genre}
+      @@genres << genre
+    end
     
     if @@genre_count[genre] = nil
       @@genre_count[genre] = 1
     else
       @@genre_count[genre] =+
+    end
     
   end
   
