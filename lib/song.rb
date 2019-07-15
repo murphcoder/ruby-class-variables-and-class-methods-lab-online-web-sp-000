@@ -26,7 +26,6 @@ class Song
     else
       @@genre_count[genre] =+
     end
-  end
   
   def artists
     @@artists
@@ -35,4 +34,5 @@ class Song
   def genres
     @@genres
   end
+end
 end
